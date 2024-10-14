@@ -21,4 +21,8 @@ public class Contributor {
     private boolean siteAdmin;
 
     private int contributions;
+
+    public Contributor(String login) {
+        this.login = login;
+    }
 }
