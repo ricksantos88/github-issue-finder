@@ -55,6 +55,7 @@ tasks.jacocoTestReport {
 		xml.required.set(true)
 		html.required.set(true)
 		csv.required.set(false)
+		html.setDestination(file("${buildDir}/jacocoHtml"))
 	}
 
 	classDirectories.setFrom(

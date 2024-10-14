@@ -68,6 +68,6 @@ class GithubRepositoryInformationControllerTest {
         mockMvc.perform(get("/api/github/issues/{owner}/{repo}", owner, repo)
             .contentType(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk())
-            .andExpect(content().json("{\"user\":\"owner\",\"repository\":\"repo\",\"issues\":[{\"title\":\"Issue 1\",\"description\":\"Description 1\"},{\"title\":\"Issue 2\",\"description\":\"Description 2\"}],\"contributors\":[]}"));
+            .andExpect(content().json("{\"owner\":\"owner\",\"repo\":\"repo\",\"issues\":[{\"title\":\"Issue 1\",\"description\":\"Description 1\"},{\"title\":\"Issue 2\",\"description\":\"Description 2\"}],\"contributors\":[]}"));
     }
 }
