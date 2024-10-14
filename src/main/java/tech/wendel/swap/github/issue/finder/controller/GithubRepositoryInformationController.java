@@ -11,11 +11,11 @@ import tech.wendel.swap.github.issue.finder.domain.service.GitHubService;
 @Slf4j
 @RestController
 @RequestMapping("/api/github")
-public class GithubController {
+public class GithubRepositoryInformationController {
 
     private final GitHubService gitHubService;
 
-    public GithubController(GitHubService gitHubService) {
+    public GithubRepositoryInformationController(GitHubService gitHubService) {
         this.gitHubService = gitHubService;
     }
 

@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-class GithubControllerTest {
+class GithubRepositoryInformationControllerTest {
 
     private MockMvc mockMvc;
 
@@ -29,12 +29,12 @@ class GithubControllerTest {
     private GitHubServiceImpl gitHubServiceImpl;
 
     @InjectMocks
-    private GithubController gitHubController;
+    private GithubRepositoryInformationController gitHubRepositoryInformationController;
 
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-        mockMvc = MockMvcBuilders.standaloneSetup(gitHubController).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(gitHubRepositoryInformationController).build();
     }
 
     @Test
