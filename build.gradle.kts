@@ -56,4 +56,15 @@ tasks.jacocoTestReport {
 		html.required.set(true)
 		csv.required.set(false)
 	}
+
+	classDirectories.setFrom(
+		files(classDirectories.files.map {
+			fileTree(it) {
+				exclude("tech/wendel/swap/github/issue/finder/advicers/**")
+				exclude("tech/wendel/swap/github/issue/finder/infrastructure/**")
+				exclude("tech/wendel/swap/github/issue/finder/domain/exceptions/**")
+				exclude("tech/wendel/swap/github/issue/finder/domain/model/**")
+			}
+		})
+	)
 }
